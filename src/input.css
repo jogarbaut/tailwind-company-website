@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Class */
+@layer utilities {
+  .section-min-height {
+    /* 68px comes from the header section h1 line-height plus the top/bottom padding of the header section */
+    min-height: calc(100vh - 68px);
+  }
+
+  /* Animations */
+  .toggle-btn {
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg]
+  }
+}
